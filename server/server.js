@@ -29,10 +29,8 @@ app.post('/upload', (req, res) => {
     res.end();
   }
 
-  // we'll files "nowhere"
-  // let filePath = '/dev/null';
-  // could use a real path instead, e.g.
-  let filePath = path.join('/tmp', fileId);
+  // path for downloaded files
+  let filePath = path.join('../tmp', fileId);
   console.log("upload startedб filePath:>>", filePath);
 
   debug("onUpload fileId: ", fileId);
